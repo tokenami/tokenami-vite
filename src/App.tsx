@@ -7,18 +7,20 @@ function App() {
 
   return (
     <div
-      className={`theme-${theme}`}
+      data-theme={theme}
       style={css({
-        '--surface-from': 'var(--color_primary)',
-        '--surface-to': 'var(--color_secondary)',
-        '--background-image': 'var(--surface_radial-gradient)',
+        '--background-color': 'var(--color_blue9)',
+        '--background-image': 'var(--gradient_to-b)',
+        '--gradient-from': 'var(--color_blue9)',
+        '--gradient-to': 'var(--color_violet10)',
         '--height': 'var(--size_screen-h)',
         '--display': 'flex',
         '--flex-direction': 'column',
-        '--md_flex-direction': 'row',
+        '--gap': 4,
         '--align-items': 'center',
         '--justify-content': 'center',
-        '--gap': 4,
+
+        '--md_flex-direction': 'row',
       })}
     >
       <Button onClick={() => setTheme((theme) => (theme === 'light' ? 'dark' : 'light'))}>
@@ -42,13 +44,13 @@ type ButtonElementProps = React.ComponentPropsWithoutRef<'button'>;
 interface ButtonProps extends TokenamiStyle<ButtonElementProps>, Variants<typeof button> {}
 
 const Button = React.forwardRef<ButtonElement, ButtonProps>((props, forwardedRef) => {
-  const { outline = true, disabled = false, ...buttonProps } = props;
+  const { disabled = false, ...buttonProps } = props;
   return (
     <button
       {...buttonProps}
       ref={forwardedRef}
       disabled={disabled}
-      style={button({ outline, disabled }, props.style)}
+      style={button({ disabled }, props.style)}
     />
   );
 });
@@ -58,27 +60,26 @@ Button.displayName = 'Button';
 const button = css.compose({
   '--height': 15,
   '--px': 8,
-  '--bg-color': 'var(--color_secondary)',
-  '--border-radius': 'var(--radii_rounded)',
-  '--border': 'var(--border_none)',
-  '--font-family': 'var(--font_sans)',
-  '--font-size': 'var(--font-size_medium)',
-  '--color': 'var(--color_tertiary)',
-  '--transition': 'var(--transition_all)',
+  '--border-radius': 'var(--radii_base)',
+  '--border': 'var(---,none)',
+  '--bg': 'var(--color_sky9)',
+  '--font-size': 'var(--fluid-text-size_md-2xl)',
+  '--fluid-text-size-min': 1.125,
+  '--fluid-text-size-max': 1.5,
+  '--transition': 'var(--morph_all)',
+  '--transition-duration': 'var(--time_300)',
+  '--cursor': 'pointer',
 
-  '--hover_bg-color': 'var(--color_tertiary)',
-  '--hover_color': 'var(--color_secondary)',
+  '--hover_bg': 'var(--color_iris9)',
+  '--hover_color': 'var(--color_white)',
   '--hover_animation': 'var(--anim_wiggle)',
+  '--hover_box-shadow': 'var(--shadow_2xl)',
+  '--hover_shadow-color': 'var(--color_sky9a)',
 
   variants: {
     disabled: {
       true: {
-        '--opacity': 'var(--alpha_disabled)',
-      },
-    },
-    outline: {
-      true: {
-        '--box-shadow': 'var(--shadow_ring)',
+        '--opacity': 'var(--alpha_60)',
       },
     },
   },
