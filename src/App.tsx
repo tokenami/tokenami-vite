@@ -74,7 +74,7 @@ const button = css.compose({
   '--hover_color': 'var(--color_white)',
   '--hover_animation': 'var(--anim_wiggle)',
   '--hover_box-shadow': 'var(--shadow_2xl)',
-  '--hover_shadow-color': 'var(--color_sky9a)',
+  '--hover_shadow-color': 'var(--color_skyA9)',
 
   variants: {
     disabled: {

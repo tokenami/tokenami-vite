@@ -9,7 +9,8 @@
     "dev:css": "tokenami --watch -o src/tokenami.css",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit --project tsconfig.ci.json"
   },
   "dependencies": {
     "@tokenami/css": "latest",

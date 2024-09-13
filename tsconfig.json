@@ -22,5 +22,5 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": [".tokenami/tokenami.env.d.ts", "src"],
-  "references": [{ "path": "./tsconfig.node.json" }],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
