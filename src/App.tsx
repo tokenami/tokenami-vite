@@ -28,7 +28,7 @@ function App() {
       </Button>
 
       {/* note the padding passed here correctly overrides the internal `px` padding */}
-      <Button disabled style={css({ '--padding-left': 10, '--padding-right': 10 })}>
+      <Button disabled style={{ '--padding-left': 10, '--padding-right': 10 }}>
         disabled
       </Button>
     </div>
@@ -63,9 +63,9 @@ const button = css.compose({
   '--border-radius': 'var(--radii_base)',
   '--border': 'var(---,none)',
   '--bg': 'var(--color_sky9)',
-  '--font-size': 'var(--fluid-text-size_md-2xl)',
-  '--fluid-text-size-min': 1.125,
-  '--fluid-text-size-max': 1.5,
+  '--font-size': 'var(--fluid-text-size-clamp_md-2xl)',
+  '--fluid-text-size-min': 'var(--fluid-text-size_lg)',
+  '--fluid-text-size-max': 'var(--fluid-text-size_2xl)',
   '--transition': 'var(--morph_all)',
   '--transition-duration': 'var(--time_300)',
   '--cursor': 'pointer',
