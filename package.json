@@ -13,14 +13,14 @@
     "typecheck": "tsc --noEmit --project tsconfig.ci.json"
   },
   "dependencies": {
-    "@tokenami/css": "latest",
-    "@tokenami/ds": "latest",
+    "@tokenami/css": "0.0.70",
+    "@tokenami/ds": "0.0.70",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@tokenami/dev": "latest",
-    "@tokenami/ts-plugin": "latest",
+    "@tokenami/dev": "0.0.70",
+    "@tokenami/ts-plugin": "0.0.70",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
