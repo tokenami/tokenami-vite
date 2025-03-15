@@ -2,38 +2,45 @@ import * as React from 'react';
 import { css, type Variants, type TokenamiStyle } from './css';
 import './tokenami.css';
 
-function App() {
+const App = () => (
+  <Container>
+    {/* note the padding here correctly overrides the internal `px` padding */}
+    <Button disabled style={{ '--padding-left': 10, '--padding-right': 10 }}>
+      disabled
+    </Button>
+  </Container>
+);
+
+/* -------------------------------------------------------------------------------------------------
+ * Container
+ * -----------------------------------------------------------------------------------------------*/
+
+const Container: React.FC<React.PropsWithChildren> = ({ children }) => {
   const [theme, setTheme] = React.useState('light');
-
+  const [cn, css] = container();
   return (
-    <div
-      data-theme={theme}
-      style={css({
-        '--background-color': 'var(--color_blue9)',
-        '--background-image': 'var(--gradient_to-b)',
-        '--gradient-from': 'var(--color_blue9)',
-        '--gradient-to': 'var(--color_violet10)',
-        '--height': 'var(--size_screen-h)',
-        '--display': 'flex',
-        '--flex-direction': 'column',
-        '--gap': 4,
-        '--align-items': 'center',
-        '--justify-content': 'center',
-
-        '--md_flex-direction': 'row',
-      })}
-    >
+    <div data-theme={theme} className={cn()} style={css()}>
       <Button onClick={() => setTheme((theme) => (theme === 'light' ? 'dark' : 'light'))}>
         toggle theme
       </Button>
-
-      {/* note the padding passed here correctly overrides the internal `px` padding */}
-      <Button disabled style={{ '--padding-left': 10, '--padding-right': 10 }}>
-        disabled
-      </Button>
+      {children}
     </div>
   );
-}
+};
+
+const container = css.compose({
+  '--background-color': 'var(--color_blue9)',
+  '--background-image': 'var(--gradient_to-b)',
+  '--gradient-from': 'var(--color_blue9)',
+  '--gradient-to': 'var(--color_violet10)',
+  '--height': 'var(--size_screen-h)',
+  '--display': 'flex',
+  '--flex-direction': 'column',
+  '--gap': 4,
+  '--align-items': 'center',
+  '--justify-content': 'center',
+  '--md_flex-direction': 'row',
+});
 
 /* -------------------------------------------------------------------------------------------------
  * Button
@@ -45,17 +52,17 @@ interface ButtonProps extends TokenamiStyle<ButtonElementProps>, Variants<typeof
 
 const Button = React.forwardRef<ButtonElement, ButtonProps>((props, forwardedRef) => {
   const { disabled = false, ...buttonProps } = props;
+  const [cn, css] = button({ disabled });
   return (
     <button
       {...buttonProps}
       ref={forwardedRef}
       disabled={disabled}
-      style={button({ disabled }, props.style)}
+      className={cn(props.className)}
+      style={css(props.style)}
     />
   );
 });
-
-Button.displayName = 'Button';
 
 const button = css.compose({
   '--height': 15,
@@ -79,7 +86,8 @@ const button = css.compose({
   variants: {
     disabled: {
       true: {
-        '--opacity': 'var(--alpha_60)',
+        '--opacity': 0.6,
+        '--pointer-events': 'none',
       },
     },
   },
