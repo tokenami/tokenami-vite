@@ -13,13 +13,13 @@
     "typecheck": "tokenami check && tsc --noEmit"
   },
   "dependencies": {
-    "@tokenami/css": "0.0.81",
-    "@tokenami/ds": "0.0.81",
+    "@tokenami/css": "0.0.87",
+    "@tokenami/ds": "0.0.87",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "tokenami": "0.0.81",
+    "tokenami": "0.0.87",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.18.0",

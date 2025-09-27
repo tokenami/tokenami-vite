@@ -6,11 +6,11 @@ settings:
 
 dependencies:
   '@tokenami/css':
-    specifier: 0.0.81
-    version: 0.0.81(tokenami@0.0.81)(typescript@5.6.2)
+    specifier: 0.0.87
+    version: 0.0.87(tokenami@0.0.87)(typescript@5.6.2)
   '@tokenami/ds':
-    specifier: 0.0.81
-    version: 0.0.81
+    specifier: 0.0.87
+    version: 0.0.87
   react:
     specifier: ^18.3.1
     version: 18.3.1
@@ -47,8 +47,8 @@ devDependencies:
     specifier: ^3.3.3
     version: 3.3.3
   tokenami:
-    specifier: 0.0.81
-    version: 0.0.81(typescript@5.6.2)
+    specifier: 0.0.87
+    version: 0.0.87(typescript@5.6.2)
   typescript:
     specifier: ^5.6.2
     version: 5.6.2
@@ -724,28 +724,28 @@ packages:
   /@stitches/stringify@1.2.8:
     resolution: {integrity: sha512-juDrnCsfBlckOu0pFOCzEN8iX6oIbLS7vFlrqXwG0Y6yzS6EnOtbP4NGNtB7XzyF9u82jLoCDq1EmBwsgBssqQ==}
 
-  /@tokenami/config@0.0.81:
-    resolution: {integrity: sha512-5mcLLOD23e1GKqmYaKaYQTuBC2sO3DqcogEdoMQwbZCCrOcqC8UwoEQVn+8OTEOvrmdA1ANFEAiW7aumOFurPQ==}
+  /@tokenami/config@0.0.87:
+    resolution: {integrity: sha512-YkMK8muTK2nMxZ0wQ97QT8Oi9f/WwRzlJkMamAXRa7oD1U9NSNrugSXjdsaCRePW9myKyMx4wyozvcErc5T4ZQ==}
     dependencies:
       '@emotion/hash': 0.9.2
       csstype: 3.1.3
 
-  /@tokenami/css@0.0.81(tokenami@0.0.81)(typescript@5.6.2):
-    resolution: {integrity: sha512-q8ePgw1EGqxhM8nq2mFPxOQ+AxwkwkaSL6wPHQiAcKWZ8l9Xmg60QQyb3khi/IZsezGDoIR77FSNw3uw6j69XQ==}
+  /@tokenami/css@0.0.87(tokenami@0.0.87)(typescript@5.6.2):
+    resolution: {integrity: sha512-VwEbg0xge5EJRzdzTGfATlqRD45HiTF6CS5ZYn6hLTMtNtS9uYAuC++wjoj0dQn081rgth54N4AK9OihHqWqKg==}
     peerDependencies:
       tokenami: '>= 0'
       typescript: '>= 5'
     dependencies:
-      '@tokenami/config': 0.0.81
-      tokenami: 0.0.81(typescript@5.6.2)
+      '@tokenami/config': 0.0.87
+      tokenami: 0.0.87(typescript@5.6.2)
       typescript: 5.6.2
     dev: false
 
-  /@tokenami/ds@0.0.81:
-    resolution: {integrity: sha512-/IVWO1X7e1mVqt18iB/qmb1EY+ZRv2znbzMISUaS96X24/SUqplU6pKidWis6rhx77s95I1hp9Mi0dIuh6ORDA==}
+  /@tokenami/ds@0.0.87:
+    resolution: {integrity: sha512-0842z3N+QN70Jm4kNJ13CE5LDp/53yHCQY2FvyH+GWzGRQ/xntBVVGsS+Kin4Gg0oFEyTjfslup1c4VDoQKr6A==}
     dependencies:
       '@radix-ui/colors': 3.0.0
-      '@tokenami/config': 0.0.81
+      '@tokenami/config': 0.0.87
 
   /@types/babel__core@7.20.5:
     resolution: {integrity: sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==}
@@ -1467,6 +1467,13 @@ packages:
     dependencies:
       to-regex-range: 5.0.1
 
+  /find-up@4.1.0:
+    resolution: {integrity: sha512-PpOwAdQ/YlXQ2vj8a3h8IipDuYRi3wceVQQGYWxNINccq40Anw7BlsEXCMbt1Zt+OLA6Fq9suIpIWD0OsnISlw==}
+    engines: {node: '>=8'}
+    dependencies:
+      locate-path: 5.0.0
+      path-exists: 4.0.0
+
   /find-up@5.0.0:
     resolution: {integrity: sha512-78/PXT1wlLLDgTzDs7sjq9hzz0vXD+zn+7wypEe4fXQxCmdmqfGsEPQxmiCSQI3ajFV91bVSsvNtrJRiW6nGng==}
     engines: {node: '>=10'}
@@ -1584,11 +1591,6 @@ packages:
     resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==}
     engines: {node: '>=8'}
 
-  /hasharray@1.1.2:
-    resolution: {integrity: sha512-7w3idwaVXX9gL9LiTCBSNKRGTBcp2WI/kf13UYeZ9+trOGBHVYHei6qtMY6DVnwGOouVUSRg0+L2xf4Q2/CmzA==}
-    dependencies:
-      jclass: 1.2.1
-
   /iconv-lite@0.4.24:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==}
     engines: {node: '>=0.10.0'}
@@ -1690,10 +1692,6 @@ packages:
       '@isaacs/cliui': 8.0.2
     optionalDependencies:
       '@pkgjs/parseargs': 0.11.0
-
-  /jclass@1.2.1:
-    resolution: {integrity: sha512-mRx8uv1qJLOtxbRf3IWOQIH2ro7VIPn6ZkhbTcUJvJEslLzYA7BSATXDi/GR1yKYV9DASsjTZL+0YJPdqSMznw==}
-    engines: {node: '>= 0.6'}
 
   /jiti@1.21.6:
     resolution: {integrity: sha512-2yTgeWTWzMWkHu6Jp9NKgePDaYHbntiwvYuuJLbbN9vl7DC9DvXKOB2BC3ZZ92D3cvV/aflH0osDfwpHepQ53w==}
@@ -1847,6 +1845,12 @@ packages:
   /lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
+  /locate-path@5.0.0:
+    resolution: {integrity: sha512-t7hw9pI+WvuwNJXwk5zVHpyhIqzg2qTlklJOf0mVxGSbe3Fp2VieZcduNYjaLDoy6p9uGpQEGWG87WpMKlNq8g==}
+    engines: {node: '>=8'}
+    dependencies:
+      p-locate: 4.1.0
+
   /locate-path@6.0.0:
     resolution: {integrity: sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==}
     engines: {node: '>=10'}
@@ -1997,6 +2001,12 @@ packages:
     resolution: {integrity: sha512-D2FR03Vir7FIu45XBY20mTb+/ZSWB00sjU9jdQXt83gDrI4Ztz5Fs7/yy74g2N5SVQY4xY1qDr4rNddwYRVX0g==}
     engines: {node: '>=0.10.0'}
 
+  /p-limit@2.3.0:
+    resolution: {integrity: sha512-//88mFWSJx8lxCzwdAABTJL2MyWB12+eIY7MDL2SqLmAkeKU9qxRvWuSyTjm3FUmpBEMuFfckAIqEaVGUDxb6w==}
+    engines: {node: '>=6'}
+    dependencies:
+      p-try: 2.2.0
+
   /p-limit@3.1.0:
     resolution: {integrity: sha512-TYOanM3wGwNGsZN2cVTYPArw454xnXj5qmWF1bEoAc4+cU/ol7GVh7odevjp1FNHduHc3KZMcFduxU5Xc6uJRQ==}
     engines: {node: '>=10'}
@@ -2004,12 +2014,22 @@ packages:
       yocto-queue: 0.1.0
     dev: true
 
+  /p-locate@4.1.0:
+    resolution: {integrity: sha512-R79ZZ/0wAxKGu3oYMlz8jy/kbhsNrS7SKZ7PxEHBgJ5+F2mtFW2fK2cOtBh1cHYkQsbzFV7I+EoRKe6Yt0oK7A==}
+    engines: {node: '>=8'}
+    dependencies:
+      p-limit: 2.3.0
+
   /p-locate@5.0.0:
     resolution: {integrity: sha512-LaNjtRWUBY++zB5nE/NwcaoMylSPk+S+ZHNB1TzdbMJMny6dynpAGt7X/tl/QYq3TIeE6nxHppbo2LGymrG5Pw==}
     engines: {node: '>=10'}
     dependencies:
       p-limit: 3.1.0
     dev: true
+
+  /p-try@2.2.0:
+    resolution: {integrity: sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==}
+    engines: {node: '>=6'}
 
   /package-json-from-dist@1.0.0:
     resolution: {integrity: sha512-dATvCeZN/8wQsGywez1mzHtTlP22H8OEfPrVMLNr4/eGa+ijtLn/6M5f0dY8UKNrC2O9UCU6SSoG3qRKnt7STw==}
@@ -2024,7 +2044,6 @@ packages:
   /path-exists@4.0.0:
     resolution: {integrity: sha512-ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w==}
     engines: {node: '>=8'}
-    dev: true
 
   /path-is-absolute@1.0.1:
     resolution: {integrity: sha512-AVbw3UJ2e9bq64vSaS9Am0fje1Pa8pbGqTTsmXfaIiMpnr5DlDhfJOuLj9Sf95ZPVDAUerDfEk88MPmPe7UCQg==}
@@ -2338,15 +2357,15 @@ packages:
     dependencies:
       is-number: 7.0.0
 
-  /tokenami@0.0.81(typescript@5.6.2):
-    resolution: {integrity: sha512-7Bzyskj+rV7XagYy0YMAzfHd48QkLPO77o89uarC2vhPSSKmBjpJl1NEt8NeSVjo1w1TQBDvSGajPU64TAQb5g==}
+  /tokenami@0.0.87(typescript@5.6.2):
+    resolution: {integrity: sha512-LFWU19mmMC/m83YQb6uAuA2MQi/nR1mwjrgAv5j1fEnpzpvhE46HIzUFO+ocgYE/nQV1e+mN/ZRdhKN6x0Ew7Q==}
     hasBin: true
     peerDependencies:
       typescript: '>= 5'
     dependencies:
       '@stitches/stringify': 1.2.8
-      '@tokenami/config': 0.0.81
-      '@tokenami/ds': 0.0.81
+      '@tokenami/config': 0.0.87
+      '@tokenami/ds': 0.0.87
       acorn: 8.12.1
       acorn-walk: 8.3.4
       browserslist: 4.24.4
@@ -2357,18 +2376,13 @@ packages:
       csstype: 3.1.3
       culori: 4.0.1
       fast-glob: 3.3.2
+      find-up: 4.1.0
       inquirer: 9.3.6
       jiti: 1.21.6
       lightningcss: 1.29.1
       pathe: 1.1.2
       sucrase: 3.35.0
-      trie-search: 2.0.0
       typescript: 5.6.2
-
-  /trie-search@2.0.0:
-    resolution: {integrity: sha512-AJMlAQ/6E5+K45SAOqzeqr0qXWqSREclp3mAWss0PvB9ifBL+QXn2LeZBgUBUifjj5ZtTpo4uKplqUnt9VZcdQ==}
-    dependencies:
-      hasharray: 1.1.2
 
   /ts-api-utils@1.3.0(typescript@5.6.2):
     resolution: {integrity: sha512-UQMIo7pb8WRomKR1/+MFVLTroIvDVtMX3K6OUir8ynLyzB8Jeriont2bTAtmNPa1ekAgN7YPDyf6V+ygrdU+eQ==}
