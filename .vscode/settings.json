@@ -1,8 +1,5 @@
 {
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
-
-  "editor.quickSuggestions": {
-    "strings": true
-  }
+  "editor.quickSuggestions": { "strings": true }
 }
