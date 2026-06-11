@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { css, type Variants, type TokenamiStyle } from './css';
-import './tokenami.css';
 
 const App = () => (
   <Container>
