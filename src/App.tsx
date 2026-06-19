@@ -14,11 +14,13 @@ const App = () => (
  * Container
  * -----------------------------------------------------------------------------------------------*/
 
-const Container: React.FC<React.PropsWithChildren> = ({ children }) => {
+type ContainerProps = TokenamiStyle<React.ComponentProps<'div'>>;
+
+const Container: React.FC<ContainerProps> = ({ children, ...props }) => {
   const [theme, setTheme] = React.useState('light');
   const [cn, css] = container();
   return (
-    <div data-theme={theme} className={cn()} style={css()}>
+    <div {...props} data-theme={theme} className={cn(props.className)} style={css(props.style)}>
       <Button onClick={() => setTheme((theme) => (theme === 'light' ? 'dark' : 'light'))}>
         toggle theme
       </Button>
