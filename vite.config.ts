@@ -4,5 +4,5 @@ import * as tokenami from '@tokenami/unplugin';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [tokenami.vite(), react()],
+  plugins: [tokenami.vite({ output: './src/tokenami.css' }), react()],
 });
