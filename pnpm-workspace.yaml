@@ -1,0 +1,3 @@
+minimumReleaseAgeExclude:
+  - tokenami
+  - '@tokenami/*'
